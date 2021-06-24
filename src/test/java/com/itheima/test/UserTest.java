@@ -46,5 +46,15 @@ public class UserTest {
         in.close();
     }
 
+    @Test
+    public void testFindAll(){
+        List<User> users = userDao.findAll();
+        for (User user:users){
+            System.out.println("-----------------");
+            System.out.println(user);
+            System.out.println(user.getRoles());
+        }
+    }
+
 
 }
